@@ -30,7 +30,7 @@ BUILD_DIR_TEST = $(abspath $(BUILD_DIR)/../build-test)
 BUILD_DIR_COVERAGE = $(abspath $(BUILD_DIR)/../build-coverage)
 
 # Output directory variable for use in pattern rules.
-# This is intended for internal use only, hence the explicit override
+# This is intended for internal    use only, hence the explicit override
 # definition.
 override OUTPUT_DIR = $(BUILD_DIR)
 
