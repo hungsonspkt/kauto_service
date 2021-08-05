@@ -59,7 +59,7 @@ set(BUILD_TYPE "RELEASE")
 #set(kernel_mandatory_version 4.8)
 set(kernel_minimal_version 4.8)
 
-# Compiler selection if needed. Impose a minimal version.
+# Compiler selection if needed. Impose a minimal   version.
 # -----------------------------------------------
 set (gcc_minimal_version 4.9)
 
