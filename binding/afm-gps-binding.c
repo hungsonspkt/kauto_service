@@ -407,5 +407,12 @@ const struct afb_binding_v3 afbBindingV3 = {
 	.api = "gps",
 	.specification = "GNSS/GPS API",
 	.verbs = binding_verbs,
+	.preinit = NULL,
 	.init = init,
+	.onevent = NULL,
+	.userdata = NULL,
+	.provide_class = NULL,
+	.require_class = NULL,
+	.require_api = NULL,
+	.noconcurrency = 0
 };
