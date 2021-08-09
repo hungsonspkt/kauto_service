@@ -18,14 +18,14 @@
 
 # Project Info
 # ------------------
-set(PROJECT_NAME hellocount)
-set(PROJECT_PRETTY_NAME "AFM binding for hellocount")
-set(PROJECT_DESCRIPTION "Binding for handling NMEA signalisation of hellocount")
+set(PROJECT_NAME agl-service-gps)
+set(PROJECT_PRETTY_NAME "AFM binding for GPS")
+set(PROJECT_DESCRIPTION "Binding for handling NMEA signalisation of GPS")
 set(PROJECT_VERSION "1.0")
 set(PROJECT_ICON "icon.png")
 set(PROJECT_LICENSE "APL2.0")
 set(PROJECT_LANGUAGES,"C")
-set(API_NAME "hellocount")
+set(API_NAME "gps")
 
 # Where are stored the project configuration files
 # relative to the root project directory
@@ -59,7 +59,7 @@ set(BUILD_TYPE "RELEASE")
 #set(kernel_mandatory_version 4.8)
 set(kernel_minimal_version 4.8)
 
-# Compiler selection if needed. Impose a minimal   version.
+# Compiler selection if needed. Impose a minimal version.
 # -----------------------------------------------
 set (gcc_minimal_version 4.9)
 
@@ -108,7 +108,7 @@ set(WIDGET_TYPE application/vnd.agl.service)
 # This is the file that will be executed, loaded,
 # at launch time by the application framework.
 #
-set(WIDGET_ENTRY_POINT lib/libhellocount.so)
+set(WIDGET_ENTRY_POINT lib/libafm-gps-binding.so)
 
 # Print a helper message when every thing is finished
 # ----------------------------------------------------

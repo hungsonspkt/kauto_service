@@ -45,8 +45,9 @@
     counter++;
   }
 
-static const afb_verb_t binding_verbs[] = {
-	 /*Without security*/
+
+static const struct afb_verb_t binding_verbs[] = {
+    /*Without security*/
     {.verb = "ping", .session = AFB_SESSION_NONE, .callback = pingSample, .auth = NULL},
     {.verb = "count", .session = AFB_SESSION_NONE, .callback = count, .auth = NULL},
     {NULL}
@@ -55,8 +56,8 @@ static const afb_verb_t binding_verbs[] = {
 /*
  * binder API description
  */
-const afb_binding_t afbBindingV3 = {
-	.api = "count",
+const struct afb_binding_t  afbBindingV3 = {
+    .api = "count",
     .specification = "HelloCount API",
     .verbs = verbs,
     .preinit = NULL,
