@@ -34,6 +34,28 @@
 static struct gps_data_t data;
 static afb_event_t location_event;
 
+static void pingSample(afb_req_t request)
+  {
+    static int pingcount = 0;
+
+    afb_req_success_f(request, json_object_new_int(pingcount), "Ping count = %d", pingcount);
+
+    AFB_API_NOTICE(afbBindingV3root, "Verbosity macro at level notice invoked at ping invocation count = %d", pingcount);
+
+    pingcount++;
+  }
+
+  static void count(afb_req_t request)
+  {
+    static int counter = 0;
+
+    afb_req_success_f(request, json_object_new_int(counter), "Counter = %d", counter);
+
+    AFB_API_NOTICE(afbBindingV3root, "Verbosity macro at level notice invoked at count invocation count = %d", counter);
+
+    counter++;
+  }
+
 static void get_data(afb_req_t request)
 {
 }
@@ -50,6 +72,8 @@ static int init(afb_api_t api)
 //static const struct afb_verb_v3 binding_verbs[] = {
 static const afb_verb_t binding_verbs[] = {
 	{ .verb = "location",    .callback = get_data,     .info = "Get GNSS data" },
+	{ .verb = "ping", .session = AFB_SESSION_NONE, .callback = pingSample, .auth = NULL},
+    { .verb = "count", .session = AFB_SESSION_NONE, .callback = count, .auth = NULL},
 	{ }
 };
 
