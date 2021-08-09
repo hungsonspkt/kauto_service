@@ -144,8 +144,8 @@ set(PACKAGE_MESSAGE "Install widget file using in the target : afm-util install 
 # Optional Application Framework security token
 # and port use for remote debugging.
 #------------------------------------------------------------
-#set(AFB_TOKEN   ""      CACHE PATH "Default AFB_TOKEN")
-#set(AFB_REMPORT "1234" CACHE PATH "Default AFB_TOKEN")
+set(AFB_TOKEN   ""      CACHE PATH "Default AFB_TOKEN")
+set(AFB_REMPORT "1234" CACHE PATH "Default AFB_TOKEN")
 
 # This include is mandatory and MUST happens at the end
 # of this file, else you expose you to unexpected behavior
