@@ -48,7 +48,7 @@ static int init(afb_api_t api)
 }
 
 //static const struct afb_verb_v3 binding_verbs[] = {
-static const struct afb_verb_t binding_verbs[] = {
+static const afb_verb_t binding_verbs[] = {
 	{ .verb = "location",    .callback = get_data,     .info = "Get GNSS data" },
 	{ }
 };
@@ -57,7 +57,7 @@ static const struct afb_verb_t binding_verbs[] = {
  * binder API description
  */
 //const struct afb_binding_v3 afbBindingV3 = {
-const struct afb_binding_t afbBindingV3 = {
+const afb_binding_t afbBindingV3 = {
 	.api = "gps",
 	.specification = "GNSS/GPS API",
 	.verbs = binding_verbs,
