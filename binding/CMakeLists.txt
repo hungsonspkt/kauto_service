@@ -18,11 +18,12 @@
 ###########################################################################
 
 # Add target to project dependency list
-PROJECT_TARGET_ADD(afm-gps-binding)
+# PROJECT_TARGET_ADD(afm-gps-binding)
+PROJECT_TARGET_ADD(afm-helloprj-binding)
 
 	# Define project Targets
 	# add_library(afm-gps-binding MODULE afm-gps-binding.c)
-	ADD_LIBRARY(afm-gps-binding MODULE afm-gps-binding.c)
+	ADD_LIBRARY(afm-helloprj-binding MODULE afm-helloprj-binding.c)
 
 	# Binder exposes a unique public entry point
 	SET_TARGET_PROPERTIES(${TARGET_NAME} PROPERTIES

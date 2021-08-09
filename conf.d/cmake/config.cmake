@@ -18,7 +18,8 @@
 
 # Project Info
 # ------------------
-set(PROJECT_NAME agl-service-gps)
+#set(PROJECT_NAME agl-service-gps)
+set(PROJECT_NAME agl-service-helloprj)
 set(PROJECT_PRETTY_NAME "AFM binding for GPS")
 set(PROJECT_DESCRIPTION "Binding for handling NMEA signalisation of GPS")
 set(PROJECT_VERSION "1.0")
@@ -108,7 +109,8 @@ set(WIDGET_TYPE application/vnd.agl.service)
 # This is the file that will be executed, loaded,
 # at launch time by the application framework.
 #
-set(WIDGET_ENTRY_POINT lib/libafm-gps-binding.so)
+# set(WIDGET_ENTRY_POINT lib/libafm-gps-binding.so)
+set(WIDGET_ENTRY_POINT lib/libafm-helloprj-binding.so)
 
 # Print a helper message when every thing is finished
 # ----------------------------------------------------
