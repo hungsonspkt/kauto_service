@@ -21,7 +21,8 @@
 PROJECT_TARGET_ADD(afm-gps-binding)
 
 	# Define project Targets
-	add_library(afm-gps-binding MODULE afm-gps-binding.c)
+	# add_library(afm-gps-binding MODULE afm-gps-binding.c)
+	ADD_LIBRARY(afm-gps-binding MODULE afm-gps-binding.c)
 
 	# Binder exposes a unique public entry point
 	SET_TARGET_PROPERTIES(${TARGET_NAME} PROPERTIES
@@ -33,3 +34,16 @@ PROJECT_TARGET_ADD(afm-gps-binding)
 
 	# Library dependencies (include updates automatically)
 	TARGET_LINK_LIBRARIES(${TARGET_NAME} ${link_libraries})
+
+
+
+#PROJECT_TARGET_ADD(hellocount)
+# Define project Targets
+#      ADD_LIBRARY(${TARGET_NAME} MODULE hellocount-service.c)
+
+# Binder exposes a unique public entry point
+#      SET_TARGET_PROPERTIES(${TARGET_NAME} PROPERTIES
+#      PREFIX "afb-"
+#      LABELS "BINDING"
+#      OUTPUT_NAME ${TARGET_NAME}
+#      )
